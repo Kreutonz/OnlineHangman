@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>CMPT 213 Online Hangman Game</title>
+</head>
+<body>
+<h2 class="centerTitle">CMPT 213 Online Hangman Game</h2>
+    <ul>
+        <form th:action="@{/game}" th:object="${gameInformation}" method="post">
+            <p class ="bigbox centerAndBold">
+                <th:block th:text="${gameInformation.welcomeMessage}">welcomeMessage</th:block>
+            </p>
+
+            <p class="bigbox">
+                <label class="centerAndBold">Game Rules:</label></br>
+                <th:block th:text="${gameInformation.gameRules}">gameRules</th:block>
+            </p>
+
+            <p class ="smallbox">
+            <label class="centerAndBold">Creator Name: </label>
+            <th:block th:text="${gameInformation.creatorName}">creatorName</th:block><br/><br/>
+
+            <label class="centerAndBold">Creator Student ID: </label>
+            <th:block th:text="${gameInformation.creatorStudentID}">creatorStudentID</th:block><br/><br/>
+
+            <label class="centerAndBold">Creator Email: </label>
+            <th:block th:text="${gameInformation.creatorEmail}">creatorEmail</th:block><br/><br/>
+            </p>
+
+            <button type="submit" class="centerAndBold">Play New Game</button>
+        </form>
+
+        <img th:src="@{/images/Hangman-icon.png}"/>
+    </ul>
+    <label class="purple smallText">Image Source:</label>
+    <a href="https://assistant.google.com/services/a/uid/000000de2b8ea584?hl=en-US" class="purple smallText">https://assistant.google.com/services/a/uid/000000de2b8ea584?hl=en-US</a>
+</body>
+</html>

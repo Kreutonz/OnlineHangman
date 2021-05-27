@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>GAME NOT FOUND HTML</title>
+</head>
+<body>
+    <h2 class="centerTitle">GAME NOT FOUND</h2>
+    <ul>
+        <p th:object="${id}" class="smallbox">
+            <label class="centerAndBold">Game of ID: </label>
+            <span th:text="${id}" class="darkRed"></span>
+            <label class="centerAndBold"> Does not exist</label>
+        </p>
+
+        <img th:src="@{/images/computerTroll.gif}" class="spaceOut"/>
+    </ul>
+    <a href="/welcome">Return to Welcome Page</a><br/>
+    <label class="purple smallText">GIF Source:</label>
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Ftroll-gifs&psig=AOvVaw2nEaSd_tMPKQQ9mG3bgeCU&ust=1596834006905000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKj4_LC8h-sCFQAAAAAdAAAAABBX"
+       class="purple smallText">https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Ftroll-gifs&psig=AOvVaw2nEaSd_tMPKQQ9mG3bgeCU&ust=1596834006905000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKj4_LC8h-sCFQAAAAAdAAAAABBX
+    </a>
+</body>
+</html>

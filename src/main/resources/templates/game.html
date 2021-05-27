@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>CMPT 213 Online Hangman Game</title>
+</head>
+<h2 class="centerTitle">CMPT 213 Online Hangman Game</h2>
+<ul>
+    <form th:object="${gameObject}" method="post">
+        <p class="bigbox">
+            <label class="centerAndBold">Game ID:</label>
+            <span th:text="${gameObject.getID()}">gameID></span><br/>
+        </p>
+
+        <p class="bigbox">
+            <label class="centerAndBold">Game Status:</label>
+            <span th:text="${gameObject.getStatus()}" class="green">status></span><br/>
+        </p>
+
+        <p class="bigbox">
+            <label class="centerAndBold">Game Progress:</label>
+            <span th:text="${gameObject.getHiddenWord()}" class="centerAndBold">hiddenWord></span><br/>
+        </p>
+
+        <p class="bigbox">
+            <label class="centerAndBold">Number of Guesses made:</label>
+            <span th:text="${gameObject.getTotalGuesses()}">totalGuesses></span><br/>
+        </p>
+
+        <p class="bigbox">
+            <label class="centerAndBold">Incorrect Guesses made:</label>
+            <span th:text="${gameObject.getIncorrectGuesses()}" class="red">incorrectGuesses></span><br/>
+        </p>
+
+        <p class="bigbox">
+            <label class="centerAndBold">Choose a Letter:</label>
+            <input type="text" th:field="*{letter}"/>
+
+            <button type="submit">Guess</button><br/>
+        </p>
+    </form>
+</ul>
+    <a href="/welcome">Return to Welcome Page</a><br/>
+</html>

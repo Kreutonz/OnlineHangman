@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>GAME OVER HTML</title>
+</head>
+<body>
+    <h2 class="centerTitle">Game Over</h2>
+    <ul>
+        <form th:object="${gameObject}">
+            <p class="smallbox">
+                <label class="centerAndBold">Game ID:</label>
+                <span th:text="${gameObject.getID()}">gameID></span><br/>
+            </p>
+
+            <p class="smallbox">
+                <label class="centerAndBold">Status: </label>
+                <span th:text="${gameObject.getStatus()}"></span></br>
+            </p>
+
+            <p class="smallbox">
+                <label class="centerAndBold">Word: </label>
+                <span th:text="${gameObject.getWord()}" class="darkRed"></span></br>
+            </p>
+
+            <p class="smallbox">
+                <label class="centerAndBold">Total Guesses:</label>
+                <span th:text="${gameObject.getTotalGuesses()}"></span></br>
+            </p>
+        </form>
+        <img th:src="@{/images/tenor.gif}" class="spaceOut"/>
+    </ul>
+    <a href="/welcome">Return to Welcome Page</a><br/>
+    <label class="purple smallText">GIF Source:</label>
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fmemes-troll-face-gifs&psig=AOvVaw2pQyfzchdmnzeg8YUEeyna&ust=1596832762685000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjSnua3h-sCFQAAAAAdAAAAABAR"
+       class="purple smallText">https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fmemes-troll-face-gifs&psig=AOvVaw2pQyfzchdmnzeg8YUEeyna&ust=1596832762685000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjSnua3h-sCFQAAAAAdAAAAABAR
+    </a>
+</body>
+</html>
